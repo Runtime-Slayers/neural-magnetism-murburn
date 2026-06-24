@@ -1,0 +1,54 @@
+# Simulation hyperparameter configuration for Neural Magnetism x Murburn Project
+
+colors:
+  dros: "#E74C3C"
+  atp: "#27AE60"
+  magnetic: "#2980B9"
+  neural: "#8E44AD"
+  thermal: "#F39C12"
+  classical: "#95A5A6"
+  murburn: "#E74C3C"
+  bg: "#0A0A0A"
+
+matplotlib:
+  figure.facecolor: "#111111"
+  axes.facecolor: "#1A1A2E"
+  axes.edgecolor: "#888888"
+  axes.labelcolor: "#EEEEEE"
+  xtick.color: "#AAAAAA"
+  ytick.color: "#AAAAAA"
+  text.color: "#EEEEEE"
+  grid.color: "#333355"
+  grid.alpha: 0.5
+  font.family: "DejaVu Sans"
+  font.size: 10
+  axes.titlesize: 12
+  legend.facecolor: "#222244"
+  legend.edgecolor: "#555577"
+
+bio_constants:
+  dros_baseline_nM: 50.0
+  o2_baseline_uM: 50.0
+  b_hfc_mT: 2.0
+  dros_diffusion_coef: 1.2e-9  # m^2/s
+
+hodgkin_huxley:
+  gNa_max_base: 120.0
+  gK_max: 36.0
+  gL: 0.3
+  ENa: 50.0
+  EK: -77.0
+  EL: -54.4
+  Cm: 1.0
+  dros_voltage_shift: 3.2
+
+kuramoto:
+  N_interneurons: 80
+  f_genus: 40.0
+  f_half_width: 1.0
+
+energy_harvesting:
+  delta_T: 17.0
+  seebeck_classic: 220.0
+  seebeck_murburn: 340.0
+  patch_area_cm2: 10.0

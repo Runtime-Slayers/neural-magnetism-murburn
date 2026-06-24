@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints
+venv/
+.venv/
+env/
+
+# IDE / Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# LaTeX auxiliary files and manuscript
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+paper.tex
+paper.pdf
+
+# Large data caches
+data/processed/*.png
+data/synthetic/*.npz
+!data/processed/.gitkeep
+!data/synthetic/.gitkeep
+publish_github_new.py
