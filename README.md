@@ -1,105 +1,94 @@
-# Neural Magnetism × Murburn Simulation Framework
+# Contributing to Neural Magnetism × Murburn Project
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.13](https://img.shields.io/badge/Python-3.13-blue.svg)](https://www.python.org/downloads/)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-A professional, modular scientific computing and simulation framework investigating the biophysical interface of **neural electromagnetic fields**, **mitochondrial Murburn bioenergetics**, and the quantum **radical pair mechanism (RPM)**. 
 
-This repository models 19 coupled differential equation systems and network architectures to bridge the gap between macroscopic neural dynamics (e.g., EEG rhythms, rTMS neuromodulation) and sub-neuronal/molecular chemistry.
+This repository implements the research pipeline for the **Contributing to Neural Magnetism × Murburn Project** project, developed by the Runtime-Slayers research group.
 
 ---
 
-## 🔬 Core Modeling Modules
+## 📊 Pipeline Architecture
 
-The framework compiles and evaluates the following systems:
-* **Murburn Foundations**: Dehydroascorbate reductase (DROS) Michaelis-Menten kinetics, radical pair mechanism branching yields, and Redox Web graph representations.
-* **Neural Electromagnetic Fields**: Hodgkin-Huxley membrane dynamics under DROS modification, cable equations for transcranial magnetic stimulation (rTMS), and Cole-Cole tissue dielectric conductivity.
-* **Brain-Computer Interfaces & Cognitive Dynamics**: Kuramoto networks for inter-brain synchrony, Watts-Strogatz small-world connectomes (Digital Twin), and microtubule-biophoton feedback.
-* **Energy Harvesting & Forensics**: Thermoelectric generation (Seebeck effect), sweat-glucose biofuel cell kinetics, PVDF piezoelectric harvesting, and Schumann location memory (forensic P300).
-* **Neuroplasticity & Toxicity**: BDNF/TrkB STDP time-windows, NMDA-mediated excitotoxicity curves, and astrocyte-mediated synaptic buffering safety thresholds.
-* **Consciousness, Sleep & Memory**: Integrated Information Theory (IIT) Phi transitions under anesthesia, sleep-wake state switching, predictive coding error dynamics, state-dependent DROS memory encryption, and electromagnetic hippocampal ripple corruption.
+The flowchart below visualizes the methodology and execution sequence implemented in this project:
 
----
-
-## 📂 Repository Structure
-
-The project is organized according to professional python engineering guidelines:
-
-```directory
-├── configs/
-│   └── hyperparams.yaml        # Shared biological/physical constants and plotting style tokens
-├── data/
-│   ├── processed/              # Generated high-resolution dark-theme plot panels (fig01 to fig32)
-│   └── synthetic/              # Local cache storing intermediate ODE integration results
-├── src/
-│   ├── __init__.py
-│   ├── data_download.py        # Static database parameters (e.g., Cole-Cole dielectric parameters)
-│   ├── preprocessing.py        # YAML configuration parsing and custom Matplotlib style initializers
-│   ├── pointer_network.py      # Graph pointer networks, Kuramoto, and Connectome models
-│   ├── protein_inference_gnn.py# Redox networks, NetworkX graphs, and Murburn rate equations
-│   ├── neural_ode_phospho.py   # Coupled ODE systems (HH, CAIP kinetics, memory states)
-│   ├── kinase_activity.py      # Biophysical activity models (STDP, Excitotoxicity, Energy Harvesting)
-│   ├── training_pipeline.py    # Master simulation runner executing the 19 models and saving caching
-│   └── visualization.py        # Rendering engine for the 32 figure panels (high-end HSL dark-theme)
-├── main.py                     # Command-line entry orchestrator (runs simulations, plots, and summaries)
-├── requirements.txt            # Project dependencies
-├── setup.sh                    # Automation shell script to configure python virtual environments
-├── LICENSE                     # MIT License
-└── CONTRIBUTING.md             # Developer contribution guidelines
+```mermaid
+graph TD
+    subgraph Data Engineering
+        A["Raw Input Datasets"] --> B["Data Preprocessing & Normalisation"]
+        B --> C["Feature Engineering & Selection"]
+    end
+    subgraph Model Architecture
+        C --> D["Multi-Model Comparative Training"]
+        D --> E["Validation via Stratified CV"]
+        E --> F["Hyperparameter Tuning & Threshold Optimization"]
+    end
+    subgraph Inference & Metrics
+        F --> G["Final Classification / Regression Performance Reports"]
+    end
 ```
 
 ---
 
-## 🛠️ Prerequisites & Setup
+## 🔍 Abstract & Research Context
 
-### System Requirements
-* **Python 3.10+** (Python 3.13 recommended)
-* Standard C/C++ compilation toolchain (optional, for acceleration in scientific libs)
+
+
+---
+
+## 📊 Key Evaluation Metrics
+
+See the detailed project report for full experimental tables.
+
+---
+
+## 📁 Repository Structure
+
+The project directory consists of the following core structures:
+  - `code/` — Pipeline execution scripts and model training modules
+  - `figures/` — Plots, charts, and visualizations generated by the pipeline
+  - `validation/` — Automated test metrics and results
+  - `setup.sh`
+  - `requirements.txt`
+  - `.gitignore`
+  - `CONTRIBUTING.md`
+  - `figures`
+  - `configs`
+  - `main.py`
+  - `data`
+  - `src`
+  - `paper.pdf` — Compiled research manuscript
+  - `README.md` — Project documentation and setup guide
+
+---
+
+## 🚀 Setup and Usage
+
+### Prerequisites
+* Python 3.8 or higher
+* Pip package manager
 
 ### Installation
-Clone this repository and configure a virtual environment:
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/Runtime-Slayers/neural-magnetism-murburn.git
+   cd neural-magnetism-murburn
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
+### Running the Analysis
+To run the primary analysis pipeline and regenerate all models, figures, and metrics:
 ```bash
-# Clone the repository
-git clone https://github.com/Runtime-Slayers/neural-magnetism-murburn.git
-cd neural-magnetism-murburn
-
-# Create and activate virtual environment (Windows)
-py -3 -m venv venv
-venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
+python code/*.py
 ```
-
-*(Alternatively, run the automated setup script on Unix-like shells: `./setup.sh`)*
+*(Look in the `code/` directory for specific pipeline execution files)*
 
 ---
 
-## 🚀 Execution & Usage
+## 📄 License and Copyright
 
-The master entry point is [main.py](file:///c:/Users/MUTHURAMANRAMANATHAN/Downloads/NeuralMagnetism_Murburn/main.py). It provides flexible CLI options:
+This work is licensed under a [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](https://creativecommons.org/licenses/by-nc-nd/4.0/).
 
-### Run Full Pipeline
-Solve all ODE/network systems, cache intermediate metrics, and render all 32 figure panels:
-```bash
-py -3 main.py --all
-```
-
-### Run Simulations Only
-Execute all 19 model integrations and update the cached NumPy archive (`data/synthetic/simulation_data.npz`):
-```bash
-py -3 main.py --run-simulations
-```
-
-### Render Plots Only
-Render figure panels from the cached simulation runs:
-```bash
-py -3 main.py --plot
-```
-
----
-
-## ⚖️ License & Contributions
-
-This project is licensed under the **MIT License** — see the [LICENSE](file:///c:/Users/MUTHURAMANRAMANATHAN/Downloads/NeuralMagnetism_Murburn/LICENSE) file for details. Contributions are freely welcomed under the terms specified in [CONTRIBUTING.md](file:///c:/Users/MUTHURAMANRAMANATHAN/Downloads/NeuralMagnetism_Murburn/CONTRIBUTING.md).
+© 2026 Runtime-Slayers / Bhavanam Rajendra Reddy et al. All rights reserved.
